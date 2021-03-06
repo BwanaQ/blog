@@ -2,6 +2,10 @@
 <h1>Habari, {{ current_user.username }}!</h1>
 {% for post in posts %}
 <div>
+  <div>
+    <img src="{{ post.author.avatar(36) }}" />
+  </div>
+
   <p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
 </div>
 {% endfor %} {%endblock content%}
