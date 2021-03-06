@@ -3,5 +3,12 @@
     <img src="{{ post.author.avatar(36) }}" />
   </div>
 
-  <p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
+  <p>
+    <a href="{{ url_for('user', username=post.author.username) }}">
+      {{ post.author.username }}
+    </a> says: <br>
+    <b>
+      {{ post.body }}
+    </b>
+  </p>
 </div>
