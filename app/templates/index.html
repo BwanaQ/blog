@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {%block content%}
 <h1>Habari, {{ current_user.username }}!</h1>
-{%if form%}}
+{%if form%}
 <form method="POST" action="">
   {{ form.hidden_tag() }}
   <fieldset class="form-group">
@@ -17,9 +17,9 @@
     </div>
   </fieldset>
 </form>
-{% endif %}} 
-{% for post in posts %}
-<div>
-  <p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
-</div>
-{% endfor %} {%endblock content%}
+{% endif %} {% for post in posts %} {% include "_posts.html" %} {% endfor %} {%
+if prev_url %}
+<a href="{{ prev_url }}">Newer posts</a>
+{% endif %} {% if next_url %}
+<a href="{{ next_url }}">Older posts</a>
+{% endif %} {%endblock content%}
