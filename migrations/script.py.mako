@@ -12,7 +12,7 @@ ${imports if imports else ""}
 # revision identifiers, used by Alembic.
 revision = ${repr(up_revision)}
 down_revision = ${repr(down_revision)}
-branch_labels = ${repr(branch_labels)}
+branchabels = ${repr(branchabels)}
 depends_on = ${repr(depends_on)}
 
 
